@@ -6,7 +6,7 @@ const CreateEventModal = () => {
     const { modal, setModal } = useContext(AppContext)
     return (
         <div className='fixed grid h-screen z-20 bg-[#11111190] place-items-center w-full backdrop-blur-sm'>
-            <div className='bg-white mx-auto my-auto w-1/2 h-[450px] px-8 py-4 font-Montserrat'>
+            <div className='bg-white mx-auto my-auto w-1/2 h-[450px] px-8 py-4 font-Montserrat rounded-md'>
                 <div className='flex justify-between my-3'>
                     <p></p>
                     <p className='text-[20px]'>Create an event</p>
