@@ -9,12 +9,18 @@ import { useState, useEffect, useContext } from 'react'
 import CreateEventModal from '../modals/CreateEventModal'
 import BuyEventTicketModal from '../modals/BuyEventTicketModal'
 const LandingPage = () => {
-  const { modal, setModal } = useContext(AppContext)
+  const { modal, setModal, getEvents } = useContext(AppContext)
 
 
   useEffect(() => {
 
   }, [modal])
+
+  useEffect(() => {
+    getEvents()
+
+  }, [])
+
   return (
     <div className='w-full bg-gradient-to-bl from-blue-500/20 to-primary-button/20 bg-primary p-0 m-0'>
       {modal?.createEventModal && (<CreateEventModal />)}

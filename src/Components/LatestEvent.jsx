@@ -2,9 +2,12 @@ import React from 'react'
 import chameloen from '../assets/images/chameleonNft.png'
 import rocket from '../assets/images/rocketNft.png'
 import boxCat from '../assets/images/boxCatNft.png'
+import { AppContext } from '../context'
+import { useContext } from 'react'
 
 
 const LatestEvent = () => {
+    const {getSigner, getProvider} = useContext(AppContext)
     return (
 
         <div className='px-2 py-5 flex flex-1 justify-between rounded-xl shadow-lg border bg-primary/20 w-2/3 mx-auto'>
@@ -29,7 +32,9 @@ const LatestEvent = () => {
                         </div>
 
                         <div>
-                            <button className='flex text-[10px] text-white border-2 bg-primary-button py-2 px-8'>Buy Ticket</button>
+                            <button 
+                            onClick={()=> getSigner()}
+                            className='flex text-[10px] text-white border-2 bg-primary-button py-2 px-8'>Buy Ticket</button>
                         </div>
 
                     </div>
