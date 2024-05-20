@@ -4,9 +4,7 @@ import { ethers } from "ethers";
 import { NftContractABI } from "./walletServices/constants";
 import { NftContractAddress } from "./walletServices/constants";
 import { useWeb3ModalProvider, useWeb3ModalAccount } from '@web3modal/ethers/react'
-import { morphSepolia } from "./walletServices/constants";
-
-
+import { morphSepolia } from "./walletServices/constants"
 
 
 
